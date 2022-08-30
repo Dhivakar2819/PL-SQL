@@ -27,7 +27,8 @@
 -- Hint:Generate unique reference string as mentioned below.CustomerName_Gender_MaritalStatus. Use ""UNIQUE_REF_STRING"" as alias name for displaying the unique reference string."
 
 	SELECT CUSTOMER_ID, CUSTOMER_NAME, GENDER, MARITAL_STATUS, CONCAT(CUSTOMER_NAME,CONCAT('_',CONCAT(GENDER,CONCAT('_',MARITAL_STATUS)))) AS UNIQUE_REF_STRING
-	FROM CUSTOMER_PERSONAL_INFO;
+	FROM CUSTOMER_PERSONAL_INFO
+	ORDER BY CUSTOMER_ID DESC;
 
 -- 5) Write a query which will display the account number, customer id, registration date, initial deposit amount of the customer whose initial deposit amount is within the range of Rs.15000 to Rs.25000.
 
